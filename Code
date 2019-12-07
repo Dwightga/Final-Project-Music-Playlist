@@ -25,6 +25,15 @@ namespace Musicplaylist
                         int[] i = { Int32.Parse(items[4]), Int32.Parse(items[5]), Int32.Parse(items[6]), Int32.Parse(items[7]), };
                         songs[count] = new Song(items[0], items[1], items[2], items[3], i[0],i[1], i[2],i[3]); 
                         count = count + 1;
+                        
+                      var audio_info = document.getElementById('audio1');
+    document.getElementById('play').addEventListener('click', function(){
+        audio_info.play();
+    }, false);
+//
+    document.getElementById('stop').addEventListener('click', function(){
+        audio_info.pause();
+    }, false);
                        
                      
                     }
